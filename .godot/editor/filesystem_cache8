@@ -1,17 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739017971
-default_env.tres::Environment::-1::1739017958::0::1::::<><>::
-::res://assets/::1739017845
-fasilkom.png::CompressedTexture2D::7716203008561212981::1739017845::1739017973::1::::<><>::
-icon.png::CompressedTexture2D::7346330604504066256::1739017845::1739017972::1::::<><>::
-meteorBrown_big1.png::CompressedTexture2D::5959276255885206097::1739017845::1739017972::1::::<><>::
-playerShip1_blue.png::CompressedTexture2D::7616533849599883667::1739017845::1739017973::1::::<><>::
-playerShip1_green.png::CompressedTexture2D::2001637748197818689::1739017845::1739017973::1::::<><>::
-snow.png::CompressedTexture2D::4888826356960029576::1739017845::1739017972::1::::<><>::
-stone.png::CompressedTexture2D::6534652574608454091::1739017845::1739017973::1::::<><>::
-::res://scenes/::1739017845
-BlueShip.tscn::PackedScene::-1::1739017958::0::1::::<><>::res://assets/playerShip1_blue.png
-MainLevel.tscn::PackedScene::-1::1739017958::0::1::::<><>::res://scenes/StonePlatform.tscn<>res://scenes/BlueShip.tscn<>res://scenes/PlatformBlue.gd<>res://scenes/ObjectiveArea.gd
-ObjectiveArea.gd::GDScript::-1::1739017958::0::1::::<>Area2D<>::
-PlatformBlue.gd::GDScript::-1::1739017958::0::1::::<>Node2D<>::
-StonePlatform.tscn::PackedScene::-1::1739017958::0::1::::<><>::
+::res://::1740137642
+default_env.tres::Environment::784183765299159521::1740137642::0::1::::<><>::
+::res://assets/::1740135322
+fasilkom.png::CompressedTexture2D::7716203008561212981::1739506339::1739506368::1::::<><>::
+icon.png::CompressedTexture2D::7346330604504066256::1739506339::1739506368::1::::<><>::
+Level BG.png::CompressedTexture2D::8786997830599159068::1739507264::1739507487::1::::<><>::
+meteorBrown_big1.png::CompressedTexture2D::5959276255885206097::1739506339::1739506368::1::::<><>::
+objectiveareaa.png::CompressedTexture2D::8545694644387219417::1740135254::1740135322::1::::<><>::
+playerShip1_blue.png::CompressedTexture2D::7616533849599883667::1739506339::1739506368::1::::<><>::
+playerShip1_green.png::CompressedTexture2D::2001637748197818689::1739506339::1739506368::1::::<><>::
+snow.png::CompressedTexture2D::4888826356960029576::1739506339::1739506368::1::::<><>::
+stone.png::CompressedTexture2D::6534652574608454091::1739506339::1739506368::1::::<><>::
+::res://scenes/::1740137672
+BlueShip.tscn::PackedScene::211729922060446004::1740137642::0::1::::<><>::uid://3ruxfsvp87ub::::res://assets/playerShip1_green.png
+green_ship.gd::GDScript::-1::1740070246::0::1::::<>RigidBody2D<>::
+LoseArea.gd::GDScript::-1::1740135533::0::1::::<>Area2D<>::
+NewLevel.tscn::PackedScene::8229371788074159688::1740137642::0::1::::<><>::uid://dxgqtnp5kgn2c::::res://assets/Level BG.png<>res://scenes/PlatformBlue.gd<>uid://y5a4e3ajuy2r::::res://scenes/StonePlatform.tscn<>uid://datfp8kxjrjg::::res://scenes/BlueShip.tscn<>res://scenes/ObjectiveArea.gd<>res://scenes/green_ship.gd<>res://scenes/LoseArea.gd<>uid://dt0ulvv36q1nh::::res://assets/objectiveareaa.png
+ObjectiveArea.gd::GDScript::-1::1740135537::0::1::::<>Area2D<>::
+PlatformBlue.gd::GDScript::-1::1740070273::0::1::::<>Node2D<>::
+StonePlatform.tscn::PackedScene::1746515621318578487::1740069410::0::1::::<><>::uid://cbwgix0inp3tk::::res://assets/snow.png

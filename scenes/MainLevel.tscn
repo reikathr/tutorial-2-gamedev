@@ -1,16 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdoksexcakmop"]
+[gd_scene load_steps=13 format=3 uid="uid://dpimsy8oj87ui"]
 
 [ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxgqtnp5kgn2c" path="res://assets/Level BG.png" id="1_nmk4u"]
 [ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/PlatformBlue.gd" id="3"]
 [ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="4"]
+[ext_resource type="Script" path="res://scenes/green_ship.gd" id="5_11436"]
+[ext_resource type="Texture2D" uid="uid://dt0ulvv36q1nh" path="res://assets/objectiveareaa.png" id="7_koth1"]
+[ext_resource type="Script" path="res://scenes/LoseArea.gd" id="8_7bowy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yu82"]
+size = Vector2(140, 70)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y64kr"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(138.75, 79)
 
-[node name="MainLevel" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trkoj"]
+size = Vector2(1152.5, 49)
 
-[node name="PlatformBlue" type="Node2D" parent="."]
+[node name="NewLevel" type="Node"]
+
+[node name="LevelBg" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_nmk4u")
+
+[node name="PlatformBlue" type="CharacterBody2D" parent="."]
 position = Vector2(35, 565)
 script = ExtResource("3")
 
@@ -19,15 +35,37 @@ script = ExtResource("3")
 [node name="StonePlatform2" parent="PlatformBlue" instance=ExtResource("1")]
 position = Vector2(70, 0)
 
-[node name="BlueShip" parent="." instance=ExtResource("2")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformBlue"]
+visible = false
+position = Vector2(35, 0)
+shape = SubResource("RectangleShape2D_5yu82")
+
+[node name="GreenShip" parent="." instance=ExtResource("2")]
 position = Vector2(72.7009, 421.901)
+physics_material_override = SubResource("PhysicsMaterial_y64kr")
 lock_rotation = true
+script = ExtResource("5_11436")
 
 [node name="ObjectiveArea" type="Area2D" parent="."]
+position = Vector2(912, 0)
 script = ExtResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
+visible = false
 position = Vector2(70.625, 40)
 shape = SubResource("1")
 
+[node name="Sprite2D" type="Sprite2D" parent="ObjectiveArea"]
+position = Vector2(40, 70)
+texture = ExtResource("7_koth1")
+
+[node name="LoseArea" type="Area2D" parent="."]
+position = Vector2(1, 600)
+script = ExtResource("8_7bowy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea"]
+position = Vector2(574.75, 24)
+shape = SubResource("RectangleShape2D_trkoj")
+
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
+[connection signal="body_entered" from="LoseArea" to="LoseArea" method="_on_LoseArea_body_entered"]
