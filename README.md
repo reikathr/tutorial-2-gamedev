@@ -22,7 +22,7 @@ Jawaban: Mengubah nilai atribut mass sepertinya tidak mengubah apapun pada scene
 Jawaban: Setelah CollisionShape2D dari StonePlatform di-disable, BlueShip tidak bisa collide dengan StonePlatform, sehingga jatuh. StonePlatform masih bisa digerakkan dengan manual, tetapi tidak bisa digunakan untuk menggerakkan BlueShip lagi.
 
 8. Pada scene MainLevel, coba manipulasi atribut Position, Rotation, dan Scale milik node BlueShip secara bebas. Apa yang terjadi pada visualisasi BlueShip di Viewport?
-Jawaban: BlueShip di ViewPort berubah sesuai atributnya yang baru diubah. 
+Jawaban: BlueShip di ViewPort berubah sesuai atributnya yang baru diubah.<br>
 ![](img/adjust.png)
 ![](img/adjusted.png)
 
